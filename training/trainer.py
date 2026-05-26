@@ -1,18 +1,3 @@
-"""
-Trainer Module for SAM-SPL Model Training
-
-This module provides a comprehensive training framework for the SAM-SPL model.
-It supports both single-GPU and distributed training, with features for
-training, validation, checkpointing, and metric evaluation.
-
-Key Features:
-- Distributed training support with PyTorch DDP
-- Progress tracking with enlighten progress bars
-- Automatic checkpoint saving and loading
-- Flexible metric evaluation system
-- Support for custom loss functions
-"""
-
 import os
 from typing import Optional, Dict, Any, Tuple, Union
 import torch
@@ -282,14 +267,6 @@ def LLoss(pred, target):
 
 class Trainer:
     """
-    A comprehensive training class for SAM-SPL models.
-    
-    This class handles the complete training lifecycle including:
-    - Model training and validation
-    - Distributed training setup
-    - Checkpoint management
-    - Progress monitoring
-    - Metric evaluation
     
     Attributes:
         model: The neural network model to train
@@ -413,10 +390,7 @@ class Trainer:
         """
         all_sizes = []
         all_contrasts = []
-        
-        # 为了不拖慢 DDP 启动，如果你想只在 rank0 计算然后广播也可以，
-        # 但考虑到数据集较小，所有 rank 独立计算最简单且不容易出错。
-        
+
         # 使用 tqdm 显示进度 (只在 rank 0 显示)
         iterator = range(len(dataset))
         if self.rank == 0:
