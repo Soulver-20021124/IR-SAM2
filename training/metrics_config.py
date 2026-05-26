@@ -1,6 +1,4 @@
 """
-Metrics Configuration Module for SAM-SPL Model Evaluation
-
 This module contains custom metric implementations specifically designed for
 infrared small target detection and segmentation tasks. It provides:
 
