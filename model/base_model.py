@@ -1,15 +1,3 @@
-"""Base model utilities for SAM-SPL.
-
-This module provides adapter components that connect a SAM-style image encoder
-with the project's custom decoder and mask heads. The key elements are:
-- `SamAdaptor`: adapts SAM encoder outputs into multi-scale mask outputs.
-- `DynamicConvBlock` and `build_dynamic_conv`: helpers to build dynamic
-    convolutional blocks that optionally downsample based on stage count.
-
-Only documentation strings have been added/updated; no computational logic
-is changed by these edits.
-"""
-
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -63,7 +51,7 @@ class SinePositionalEncoding(nn.Module):
 
 class ContrastQueryGenerator(nn.Module):
     """
-    Innovation Direction 3 (Enhanced): Energy-Weighted Global Saliency Aggregation (EWGSA)
+    Energy-Weighted Global Saliency Aggregation (EWGSA)
     
     Instead of returning Top-K distinct queries, this module:
     1. Identifies Top-K high-frequency regions (internal candidates).
