@@ -15,7 +15,7 @@ Pytorch implementation for "[**IR-SAM2: Target Enhancement with SAM2 for Infrare
 > **Abstract:** Foundation models such as the Segment Anything Model (SAM) have substantially advanced promptable object segmentation in remote sensing. However, extending these capabilities to infrared small target detection (IRSTD) remains highly challenging in the presence of severe background clutter and extremely low target visibility. In this paper, we propose IR-SAM2, an effective target enhancement framework for mask-level infrared small target segmentation in the IRSTD setting. Specifically, IR-SAM2 equips the SAM2 decoder with a dedicated frequency branch, facilitating simultaneous spatio-frequency learning and deep spatio-frequency fusion, while preserving SAM2's pre-trained knowledge. Moreover, we introduce a target-centric loss to better guide the model in distinguishing small targets from complex backgrounds. Extensive experiments show that IR-SAM2 achieves highly competitive performance on the IRSTD-1k and NUDT-SIRST benchmarks, while striking an optimal balance between detection probability and false alarm rate on NUAA-SIRST. The results further demonstrate the effectiveness of spatio-frequency cues for complex-scene infrared small target segmentation. The source codes have been made publicly available to support reproducibility.
 
 <p align="center">
-    <img src="./assets/ir-sam2-pipeline.png" width="800" alt="IR-SAM2 Pipeline">
+    <img src="./assets/IR-SAM2.png" width="800" alt="IR-SAM2 Pipeline">
 </p>
 
 ## Requirements
@@ -47,7 +47,7 @@ Or you can access all the datasets we have collected via [Baidu Netdisk](https:/
 
 ## Qualitative Results
 <p align="center">
-    <img src=./assets/vis_sea.png width="900">
+    <img src=./assets/compare_model.png width="900">
 </p>
 
 ## Citation
