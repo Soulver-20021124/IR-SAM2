@@ -36,14 +36,7 @@ For the dataset used in this paper, please download the following datasets [NUDT
 Or you can access all the datasets we have collected via [Baidu Netdisk](https://pan.baidu.com/s/1FKV1m-RilwqQMcOjMyECbg?pwd=eq52).
 
 ## Results
-### Quantative Results
 
-| Dataset | IoU (%) | F1 (%) | Pd (%) | Fa (10^-6) |
-|--------|---------|--------|--------|------------|
-| NUDT-SIRST | **94.63** | **97.24** | **99.47** | **2.55** |
-| IRSTD-1k | **74.09** | **85.11** | **92.59** | **9.28** |
-| IRSTDID-SKY | **73.40** | **84.66** | **98.72** | **0.97** |
-| NUDT-sea | **60.93** | **75.72** | **82.33** | **14.92** |
 
 ## Qualitative Results
 <p align="center">
